@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Edit.Dev Livraria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="navbar text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-book-open text-2xl"></i>
+                <h1 class="text-xl font-bold">Edit.Dev Livraria</h1>
+            </div>
+            <div class="flex space-x-4">
+                <a href="/" class="hover:text-yellow-200 transition-colors">
+                    <i class="fas fa-home mr-2"></i>Início
+                </a>
+                <a href="/login" class="hover:text-yellow-200 transition-colors">
+                    <i class="fas fa-sign-in-alt mr-2"></i>Entrar
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Alert Container -->
+    <div class="alert-container"></div>
+
+    <!-- Register Form -->
+    <div class="flex items-center justify-center py-12 px-4">
+        <div class="max-w-md w-full space-y-8">
+            <div class="text-center">
+                <div class="text-6xl text-green-600 mb-4">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Crie sua conta</h2>
+                <p class="text-gray-600">Comece gratuitamente na Edit.Dev Livraria</p>
+            </div>
+            
+            <div class="card p-8">
+                <form id="registerForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                            Nome Completo
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                required
+                                class="form-input pl-10"
+                                placeholder="Seu nome completo"
+                            >
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                            Email
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-envelope text-gray-400"></i>
+                            </div>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                required
+                                class="form-input pl-10"
+                                placeholder="seu@email.com"
+                            >
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                            Senha
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-lock text-gray-400"></i>
+                            </div>
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                required
+                                class="form-input pl-10 pr-10"
+                                placeholder="Crie uma senha segura"
+                                minlength="6"
+                            >
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <button
+                                    type="button"
+                                    data-password-toggle="password"
+                                    class="text-gray-400 hover:text-gray-600 focus:outline-none"
+                                >
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="passwordStrength" class="mt-2"></div>
+                    </div>
+
+                    <div>
+                        <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">
+                            Confirmar Senha
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-lock text-gray-400"></i>
+                            </div>
+                            <input
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                type="password"
+                                required
+                                class="form-input pl-10 pr-10"
+                                placeholder="Confirme sua senha"
+                            >
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                                <button
+                                    type="button"
+                                    data-password-toggle="confirmPassword"
+                                    class="text-gray-400 hover:text-gray-600 focus:outline-none"
+                                >
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input
+                            id="agree-terms"
+                            name="agree-terms"
+                            type="checkbox"
+                            required
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                        >
+                        <label for="agree-terms" class="ml-2 block text-sm text-gray-700">
+                            Concordo com os <a href="#" class="text-blue-600 hover:text-blue-500">Termos de Uso</a> 
+                            e <a href="#" class="text-blue-600 hover:text-blue-500">Política de Privacidade</a>
+                        </label>
+                    </div>
+
+                    <div>
+                        <button
+                            type="submit"
+                            class="btn-primary w-full"
+                        >
+                            <i class="fas fa-user-plus mr-2"></i>
+                            Criar Conta Gratuita
+                        </button>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-sm text-gray-600">
+                            Já tem uma conta?
+                            <a href="/login" class="text-blue-600 hover:text-blue-500 font-medium">
+                                Faça login aqui
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Plan Benefits -->
+            <div class="card p-6 bg-green-50 border-green-200">
+                <h3 class="text-lg font-semibold text-green-900 mb-3">
+                    <i class="fas fa-gift mr-2"></i>
+                    Sua conta gratuita inclui:
+                </h3>
+                <ul class="space-y-2 text-green-800 text-sm">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        2 downloads gratuitos por mês
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Acesso aos primeiros 3 capítulos de cada livro
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-green-600 mr-2"></i>
+                        Suporte via contato (seg/qua)
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-crown text-yellow-500 mr-2"></i>
+                        <span class="font-medium">Upgrade para Pro</span> - Acesso ilimitado
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-2 gap-4 mt-8">
+                <div class="text-center p-4 bg-white rounded-lg border">
+                    <div class="text-3xl text-blue-600 mb-2">
+                        <i class="fas fa-books"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Biblioteca Completa</h4>
+                    <p class="text-xs text-gray-600">Centenas de livros técnicos</p>
+                </div>
+                
+                <div class="text-center p-4 bg-white rounded-lg border">
+                    <div class="text-3xl text-green-600 mb-2">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Acesso Mobile</h4>
+                    <p class="text-xs text-gray-600">Leia em qualquer dispositivo</p>
+                </div>
+                
+                <div class="text-center p-4 bg-white rounded-lg border">
+                    <div class="text-3xl text-purple-600 mb-2">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Download Offline</h4>
+                    <p class="text-xs text-gray-600">Leia sem internet</p>
+                </div>
+                
+                <div class="text-center p-4 bg-white rounded-lg border">
+                    <div class="text-3xl text-red-600 mb-2">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="font-semibold text-sm">Suporte Dedicado</h4>
+                    <p class="text-xs text-gray-600">Ajuda quando precisar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

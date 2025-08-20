@@ -1,0 +1,244 @@
+/* Edit.Dev Livraria - Custom Styles */
+:root {
+    --color-primary: #6f8b94;
+    --color-secondary: #706482;
+    --color-accent: #703d6f;
+    --color-light-green: #e6eba9;
+    --color-medium-green: #abbb9f;
+    --color-teal: #8fc9b9;
+    --color-cream: #d8d9c0;
+    --color-pink: #d18e8f;
+    --color-rose: #ab5c72;
+    --color-dark-rose: #91334f;
+}
+
+/* Custom component styles */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--color-teal);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-medium-green);
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-accent:hover {
+    background-color: var(--color-rose);
+    transform: translateY(-2px);
+}
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.book-card {
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-light-green) 100%);
+    border: 2px solid var(--color-teal);
+}
+
+.plan-card {
+    background: linear-gradient(135deg, white 0%, var(--color-light-green) 100%);
+    border: 2px solid var(--color-medium-green);
+}
+
+.plan-card.featured {
+    background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-primary) 100%);
+    color: white;
+    border-color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.form-input {
+    border: 2px solid var(--color-medium-green);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(111, 139, 148, 0.1);
+}
+
+.navbar {
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--color-light-green) 0%, var(--color-teal) 50%, var(--color-primary) 100%);
+}
+
+.footer {
+    background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+}
+
+.stats-card {
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-pink) 100%);
+    border: 2px solid var(--color-rose);
+}
+
+.chapter-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0.5rem 0;
+    border: 2px solid transparent;
+}
+
+.chapter-link:hover {
+    background-color: var(--color-light-green);
+    border-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.chapter-link.disabled {
+    color: #9ca3af;
+    cursor: not-allowed;
+    background-color: #f3f4f6;
+}
+
+.alert-success {
+    background-color: var(--color-light-green);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-teal);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.alert-error {
+    background-color: var(--color-pink);
+    color: var(--color-dark-rose);
+    border: 2px solid var(--color-rose);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.alert-warning {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 2px solid #f59e0b;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    background-color: var(--color-cream);
+    border-radius: 1rem;
+    height: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--color-teal) 0%, var(--color-primary) 100%);
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 9999px;
+}
+
+.badge-basic {
+    background-color: var(--color-medium-green);
+    color: white;
+}
+
+.badge-pro {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--color-light-green);
+    border-radius: 50%;
+    border-top-color: var(--color-primary);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .plan-card.featured {
+        transform: none;
+    }
+    
+    .card {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1f2937;
+        color: #f9fafb;
+    }
+    
+    .card {
+        background-color: #374151;
+        color: #f9fafb;
+    }
+}

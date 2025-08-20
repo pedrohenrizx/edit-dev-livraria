@@ -1,0 +1,24 @@
+{
+  "name": "edit-dev-livraria",
+  "version": "1.0.0",
+  "description": "Complete online bookstore with subscription plans",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["bookstore", "library", "ebooks", "subscription"],
+  "author": "Edit.Dev",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
